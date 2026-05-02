@@ -20,7 +20,11 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
+
+    /* FIX: avoid TS5101 error on Vercel */
+    "ignoreDeprecations": "5.0",
+
+    /* Path aliases */
     "paths": {
       "@/*": ["./src/*"]
     }
